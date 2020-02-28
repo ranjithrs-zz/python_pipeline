@@ -32,6 +32,7 @@ pipelines:
             - add_run_variables ${step_name}_buildNumber=${run_number}
             - add_run_variables ${step_name}_buildName=$buildName            
             - python setup.py sdist
+            - ls -al
             - jfrog rt bce $buildName $run_number            
             - jfrog rt u dist/python-example-1.0.tar.gz python-local --build-name=$buildName --build-number=$run_number
             - add_run_files /tmp/jfrog/. jfrog
