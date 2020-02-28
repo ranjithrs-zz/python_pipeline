@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: ranjithr_github
-      path: jfrog/project-examples
+      path: ranjithrs/project-examples
       branches:
         include: master
   - name: python_app_build_info
